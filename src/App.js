@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import { ThemeProvider } from '@emotion/react';
+import { RouterProvider } from 'react-router';
 import './App.css';
+import { router } from './Router/Router';
+import { Switch } from '@mui/material';
+import React, { useState } from 'react';
+import { theme, theme1 } from './Theme/Theme';
+
 
 function App() {
+
+  const [darkMode, setDarkMode] = useState(false)
+  
+  console.log(darkMode);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        
+      <ThemeProvider theme={darkMode ? theme : theme1}>
+      <Switch onClick={()=> setDarkMode(!darkMode)} />
+        <RouterProvider router={router}>
+        </RouterProvider>
+      </ThemeProvider>
     </div>
-  );
+  )
+
 }
 
 export default App;
