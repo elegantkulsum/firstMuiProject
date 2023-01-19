@@ -1,14 +1,14 @@
 
 import React from 'react';
-import HeroCard from './HeroCard';
+import Branding from './Home/Branding/Branding';
 
 const Home = () => {
 
     return (
         <div>
           
-            <HeroCard></HeroCard>
-            home page
+          <Branding></Branding>
+      
         </div>
     );
 };

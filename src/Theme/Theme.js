@@ -1,13 +1,34 @@
 import { createTheme } from "@mui/material";
 
 export const theme = createTheme({
-    palette:{
-        mode:'light'
-    }
+    palette: {
+        mode: 'light',
+        primary: {
+            main: '#111430',
+            yellow: '#FBD062',
+            green: '#7AB259',
+        },
+
+    },
+    components: {
+        MuiContainer: {
+            defaultProps: {
+                maxWidth: 'lg'
+            },
+        },
+    },
+    MuiButton: {
+        styleOverrides: {
+            root: {
+                fontSize: '1rem',
+                p: '0.6rem 2.5rem'
+            },
+        },
+        defaultProps: {
+            variant: 'contained',
+            color: 'primary'
+        }
+    },
+
 })
 
-export const theme1 = createTheme({
-    palette:{
-        mode:'dark'
-    }
-})
