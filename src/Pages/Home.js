@@ -1,13 +1,17 @@
 
 import React from 'react';
 import Branding from './Home/Branding/Branding';
+import Brands from './Home/Brands/Brands';
+import Services from './Home/Services/Services';
 
 const Home = () => {
 
     return (
         <div>
           
-          <Branding></Branding>
+          <Branding/>
+          <Brands/>
+          <Services></Services>
       
         </div>
     );
